@@ -61,9 +61,11 @@ class GitarooPause extends MusicBeatState
 			if (FlxG.random.int = 1)
 			PlayState.SONG = Song.loadFromJson('flying-hard', 'flying');
                         LoadingState.loadAndSwitchState(new PlayState());
+			}
 			else if (FlxG.random.int = 2)
 			PlayState.SONG = Song.loadFromJson('lights-deactivated-hard', 'lights-deactivated');
                         LoadingState.loadAndSwitchState(new PlayState());
+				}
 		}
 
 		super.update(elapsed);
