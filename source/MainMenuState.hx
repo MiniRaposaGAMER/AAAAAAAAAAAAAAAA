@@ -236,7 +236,8 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'story_mode':
-										MusicBeatState.switchState(new GitarooPause());
+			                                                        PlayState.SONG = Song.loadFromJson('lobby-hard', 'lobby');
+                                                                                LoadingState.loadAndSwitchState(new PlayState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
 									#if MODS_ALLOWED
