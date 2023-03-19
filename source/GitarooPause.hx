@@ -23,8 +23,7 @@ class GitarooPause extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('pauseAlt/pauseBG'));
 		add(bg);
-		FlxG.random.int(1, 2);
-
+		
 		var bf:FlxSprite = new FlxSprite(0, 30);
 		bf.frames = Paths.getSparrowAtlas('pauseAlt/bfLol');
 		bf.animation.addByPrefix('lol', "funnyThing", 13);
@@ -58,14 +57,17 @@ class GitarooPause extends MusicBeatState
 
 		if (controls.ACCEPT)
 		{
+			FlxG.random.int(1, 2);
 			if (FlxG.random.int = 1)
+						{
 			PlayState.SONG = Song.loadFromJson('flying-hard', 'flying');
                         LoadingState.loadAndSwitchState(new PlayState());
 			}
 			else if (FlxG.random.int = 2)
+						{
 			PlayState.SONG = Song.loadFromJson('lights-deactivated-hard', 'lights-deactivated');
                         LoadingState.loadAndSwitchState(new PlayState());
-				}
+		        }
 		}
 
 		super.update(elapsed);
